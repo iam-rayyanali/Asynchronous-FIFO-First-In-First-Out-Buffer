@@ -1,27 +1,27 @@
-# 🔄 Asynchronous FIFO (First-In-First-Out) Buffer
+#  Asynchronous FIFO (First-In-First-Out) Buffer
 
 The **Asynchronous FIFO** is a dual-clock, parameterizable Verilog implementation designed for safe and reliable data transfer between modules operating in **different clock domains**. This module uses **Gray code** synchronization techniques to prevent metastability and pointer errors, making it ideal for interfacing across independent clock domains in complex FPGA or ASIC systems.
 
 ---
 
-## 🧠 Key Features
+##  Key Features
 
-### 🕘 Dual Clock Domain Support
+###  Dual Clock Domain Support
 - Separate **write (`wr_clk`)** and **read (`rd_clk`)** clocks.
 - Robust pointer synchronization using **Gray code** and **double-register synchronization** across clock domains.
 
-### 📐 Parameterized Design
+###  Parameterized Design
 - `data_width`: Configurable data width (default: 8 bits).
 - `add_width`: Address width for FIFO depth (default: 4 bits ⇒ 16 entries).
 
-### ⚙️ Control & Status Signals
+###  Control & Status Signals
 - `wr_en`, `rd_en`: Control write and read operations.
 - `full`, `empty`: Flags indicating FIFO status.
 - `wr_rst`, `rd_rst`: Separate asynchronous resets for each domain.
 
 ---
 
-## 🧭 Pointer and Memory Architecture
+##  Pointer and Memory Architecture
 
 - Internal **register array** used for FIFO storage.
 - Binary write/read pointers converted to **Gray code** for cross-domain synchronization.
@@ -32,7 +32,7 @@ The **Asynchronous FIFO** is a dual-clock, parameterizable Verilog implementatio
 
 ---
 
-## 🧩 Port Descriptions
+##  Port Descriptions
 
 | Signal        | Direction | Description                                |
 |---------------|-----------|--------------------------------------------|
@@ -49,7 +49,7 @@ The **Asynchronous FIFO** is a dual-clock, parameterizable Verilog implementatio
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 The asynchronous FIFO is implemented using:
 
@@ -61,7 +61,7 @@ The asynchronous FIFO is implemented using:
 
 ---
 
-## 🧪 Testbench Overview
+##  Testbench Overview
 
 The included testbench demonstrates:
 
@@ -72,7 +72,7 @@ The included testbench demonstrates:
 
 ---
 
-## 🔧 Tools & Technologies
+##  Tools & Technologies
 
 - **Verilog HDL**
 - **Behavioral + RTL modeling**
@@ -84,8 +84,8 @@ The included testbench demonstrates:
 
 ---
 
-## 📁 Directory Structure
-## 📁 Directory Structure
+##  Directory Structure
+##  Directory Structure
 
 ```text
 asynchronous-fifo-verilog/
